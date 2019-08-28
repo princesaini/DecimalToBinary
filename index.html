@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>D2B Converter</title>
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<script type="text/javascript">
+		function calculate() {
+			var a, b;
+			a = Number(document.getElementById('binary').value);
+			document.getElementById('decimal').value = dec2bin(a);
+			function dec2bin(dec) {
+				return (dec >>> 0).toString(2);
+			}
+		}
+	</script>
+</head>
+<body>
+	<!-- Navigation -->
+	<nav class="navigation">
+		<ul class="navigation-links">
+			<a href="#" class="active">Home</a>
+			<a href="#">About</a>
+			<!-- <a href="#">Pictures</a>
+			<a href="#">Contact</a> -->
+		</ul>
+	</nav>
+
+	<!-- Content -->
+	<div class="content">
+		<h1 class="mainheading">Decimal to Binary Converter</h1>
+	</div>
+	<div class="inputs">
+		<table align="center">
+			<tr>
+				<td><input type="text" id="binary" placeholder="Decimal Number"></td>
+			</tr>
+			<tr>
+				<td><input type="text" id="decimal" placeholder="Binary Number"></td>				
+			</tr>
+			<tr>
+				<td align="center"><input type="button" value="Calculate" onclick="calculate()"></td>
+			</tr>
+		</table>
+	</div>
+
+	<footer>
+		<p>&copy; Prince Saini, 2019</p>
+	</footer>
+</body>
+</html>
